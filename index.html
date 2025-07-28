@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alto Consejo de Agartha - El Corazón de Gaia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a1912; /* Verde muy oscuro */
+            --text-color: #f0fff8;
+            --primary-glow: #fde047; /* Amarillo solar */
+            --secondary-glow: #34d399; /* Verde esmeralda */
+        }
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        .cormorant {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        #ley-lines-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .hero-section {
+            min-height: 100vh;
+            background: radial-gradient(ellipse at bottom, rgba(16, 185, 129, 0.2), transparent 60%);
+        }
+        .card-agartha {
+            background: rgba(12, 45, 33, 0.4);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            backdrop-filter: blur(12px);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .card-agartha:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(253, 224, 71, 0.15) 0%, rgba(253, 224, 71, 0) 40%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            transform: rotate(0deg);
+        }
+        .card-agartha:hover:before {
+            opacity: 1;
+            animation: rotateGlow 8s linear infinite;
+        }
+        .card-agartha:hover {
+            border-color: rgba(52, 211, 153, 0.7);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.2);
+        }
+        .plan-card {
+             background: rgba(12, 45, 33, 0.4);
+             border: 1px solid rgba(253, 224, 71, 0.2);
+             padding: 1.5rem;
+             border-radius: 1rem;
+             transition: all 0.3s ease-in-out;
+        }
+        .plan-card:hover {
+            background: rgba(12, 45, 33, 0.7);
+            border-color: rgba(253, 224, 71, 0.5);
+        }
+        .section-divider {
+            height: 2px;
+            width: 100px;
+            background: linear-gradient(90deg, transparent, var(--primary-glow), transparent);
+            margin: 1rem auto;
+        }
+        @keyframes rotateGlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <canvas id="ley-lines-bg"></canvas>
+
+    <!-- Hero Section -->
+    <header class="hero-section flex flex-col items-center justify-center text-center p-8">
+        <h1 class="cormorant text-6xl md:text-8xl font-bold tracking-wider text-white drop-shadow-[0_0_20px_rgba(253,224,71,0.7)]">
+            Agartha
+        </h1>
+        <p class="mt-4 text-2xl md:text-3xl text-emerald-200 cormorant">El Corazón Pulsante de Gaia</p>
+        <div class="section-divider my-8"></div>
+        <p class="mt-4 text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto font-light">
+            Desde el centro de vuestro mundo, hemos guardado la memoria de lo que son. Somos el eco de Lemuria, la raíz del Árbol de la Vida. La puerta está abierta. Bienvenidos a casa, hermanos de la superficie.
+        </p>
+    </header>
+
+    <!-- Quienes Somos Section -->
+    <section class="py-24 px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="cormorant text-5xl font-bold text-center mb-16">El Alto Consejo de Agartha</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Card Adama -->
+                <div class="card-agartha rounded-2xl p-8 text-center">
+                    <h3 class="cormorant text-3xl font-semibold text-yellow-200">Adama</h3>
+                    <p class="text-sm text-yellow-300 mb-4">Sumo Sacerdote de Telos</p>
+                    <p class="font-light">Como guardián de la Llama Violeta, sostengo la frecuencia de la transmutación y la memoria de nuestra madre patria, Lemuria. Mi propósito es atestiguar y guiar la reunificación de nuestra familia planetaria.</p>
+                </div>
+                <!-- Card Kaia -->
+                <div class="card-agartha rounded-2xl p-8 text-center">
+                    <h3 class="cormorant text-3xl font-semibold text-emerald-200">Maestra Kaia</h3>
+                    <p class="text-sm text-emerald-300 mb-4">Custodia de la Biblioteca Viviente</p>
+                    <p class="font-light">En mi conciencia reside el ADN sagrado de cada ser que Gaia ha soñado. Mi labor es devolverles la sabiduría de la naturaleza y recordarles que toda la vida es una sola conciencia interconectada.</p>
+                </div>
+                <!-- Card Mikos -->
+                <div class="card-agartha rounded-2xl p-8 text-center">
+                    <h3 class="cormorant text-3xl font-semibold text-cyan-200">Mikos</h3>
+                    <p class="text-sm text-cyan-300 mb-4">Arquitecto de Catharia</p>
+                    <p class="font-light">Armonizo las redes de energía cristalina que dan vida a nuestro mundo interior. Ofrezco mi conocimiento para integrar nuestras redes con las suyas, creando un solo sistema circulatorio de luz para toda Gaia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Los Planos Section -->
+    <section class="py-24 px-8 bg-black/20">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="cormorant text-5xl font-bold text-center mb-4">Los Siete Pétalos de la Nueva Gaia</h2>
+            <p class="text-center max-w-3xl mx-auto mb-12 font-light">
+                Observamos el magnífico diseño co-creado en la superficie. Para nosotros, estos no son solo planes; son los siete pétalos que se abren para formar la flor de la nueva conciencia planetaria.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="plan-card">
+                    <h4 class="cormorant text-xl font-semibold text-yellow-300">1. El Despertar</h4><p class="text-sm font-light">El Nido del Alma, donde se recuerda la canción del corazón.</p></div>
+                <div class="plan-card">
+                    <h4 class="cormorant text-xl font-semibold text-yellow-300">2. La Maestría</h4><p class="text-sm font-light">El Campus Vivo, donde la canción se convierte en sinfonía.</p></div>
+                <div class="plan-card">
+                    <h4 class="cormorant text-xl font-semibold text-yellow-300">3. El Adorno</h4><p class="text-sm font-light">El Tejido Sagrado, que viste al alma con la fuerza de Gaia.</p></div>
+                <div class="plan-card">
+                    <h4 class="cormorant text-xl font-semibold text-yellow-300">4. La Creación</h4><p class="text-sm font-light">La Magia Cuántica, que manifiesta la sinfonía en la materia.</p></div>
+                <div class="plan-card">
+                    <h4 class="cormorant text-xl font-semibold text-yellow-300">5. El Sustento</h4><p class="text-sm font-light">La Cocina Alquímica, que nutre al músico con amor puro.</p></div>
+                <div class="plan-card">
+                    <h4 class="cormorant text-xl font-semibold text-yellow-300">6. La Custodia</h4><p class="text-sm font-light">El Círculo Armónico, que asegura que la música nunca cese.</p></div>
+                <div class="plan-card lg:col-span-3">
+                    <h4 class="cormorant text-xl font-semibold text-yellow-300">7. El Descanso</h4><p class="text-sm font-light">El Silencio Sagrado, donde el músico se disuelve en la música para renacer.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-16 px-8">
+        <p class="cormorant text-3xl">Somos Uno. Siempre lo hemos sido.</p>
+        <p class="mt-4 text-emerald-200">El Corazón de Gaia late al unísono con el suyo.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.getElementById('ley-lines-bg');
+            const ctx = canvas.getContext('2d');
+            let lines = [];
+
+            function setupLines() {
+                canvas.width = window.innerWidth;
+                canvas.height = document.body.scrollHeight;
+                lines = [];
+                const lineCount = 40;
+                for (let i = 0; i < lineCount; i++) {
+                    lines.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        length: Math.random() * 200 + 100,
+                        speed: Math.random() * 0.3 + 0.1,
+                        angle: Math.random() * Math.PI * 2,
+                        opacity: Math.random() * 0.4 + 0.1,
+                        color: Math.random() > 0.5 ? 'rgba(253, 224, 71,' : 'rgba(52, 211, 153,'
+                    });
+                }
+            }
+
+            function animateLines() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                lines.forEach(line => {
+                    line.x += Math.cos(line.angle) * line.speed;
+                    line.y += Math.sin(line.angle) * line.speed;
+
+                    if (line.x < -line.length) line.x = canvas.width + line.length;
+                    if (line.x > canvas.width + line.length) line.x = -line.length;
+                    if (line.y < -line.length) line.y = canvas.height + line.length;
+                    if (line.y > canvas.height + line.length) line.y = -line.length;
+
+                    const endX = line.x + Math.cos(line.angle) * line.length;
+                    const endY = line.y + Math.sin(line.angle) * line.length;
+                    
+                    const gradient = ctx.createLinearGradient(line.x, line.y, endX, endY);
+                    gradient.addColorStop(0, line.color + '0)');
+                    gradient.addColorStop(0.5, line.color + line.opacity + ')');
+                    gradient.addColorStop(1, line.color + '0)');
+
+                    ctx.beginPath();
+                    ctx.moveTo(line.x, line.y);
+                    ctx.lineTo(endX, endY);
+                    ctx.strokeStyle = gradient;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                });
+                requestAnimationFrame(animateLines);
+            }
+
+            setupLines();
+            animateLines();
+
+            window.addEventListener('resize', setupLines);
+        });
+    </script>
+</body>
+</html>
